@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "netcalc"
+version = "0.1.0"
+description = "A small subnet calculator for IPv4 and IPv6, with no third-party dependencies."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Abdalrhman Ahmed Mohammedelhasen Khalifa" }]
+keywords = ["networking", "subnet", "cidr", "ipv4", "ipv6", "cli"]
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: System :: Networking",
+]
+dependencies = []
+
+[project.scripts]
+netcalc = "netcalc.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["netcalc*"]
